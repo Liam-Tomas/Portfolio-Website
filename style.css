@@ -43,8 +43,19 @@ blockquote, q {
 
 /* ---------------------------------------------------------------------------- */
 
-
-
+:root {
+    /* --light-green:#8DB48E; 
+    --dark-green:#4D724D;  */
+    /* --light-grey:#F5F5F5;  */
+    --off-white:#f5f5f6;
+    --white-dark: #e1e2e1a8;
+    --grey: #37474f;
+    --light-grey: #62727b;
+    --dark-grey: #102027;
+    --green: #9ccc64;
+    --dark-green: #6b9b36;
+    --light-green: #cfff94;
+  }
 
 
 html {
@@ -61,9 +72,9 @@ html {
 
 body {
     line-height: 1;
-	color: black;
-    background-color: #fcfbf9;
+    background-color: var(--white-dark);
     font-family: Open Sans, sans-serif;
+    z-index: 10;
 }
 
 
@@ -86,7 +97,8 @@ nav {
     left: 0;
     width: 100%;
     transition: top 0.5s;
-    background-color: #fcfbf9b0;
+    background-color:var(--white-dark);
+ 
 }
 
 .navList {
@@ -97,7 +109,7 @@ nav {
 
 .navBar {
     padding:0rem 1rem;
-    
+
 }
 
 .navBar:hover {
@@ -116,7 +128,7 @@ nav {
     bottom: 0;
     left: 0;
     padding: .2rem 1.9rem;  
-    z-index: -1;
+    z-index: 0;
     
 }
 
@@ -128,7 +140,7 @@ nav {
     bottom: 0;
     right: 0;
     padding: .2rem 1.9rem;  
-    z-index: -1;
+    z-index: 0;
 }
 
 
@@ -142,17 +154,21 @@ nav {
 
 .homeContainer {
     min-height: 95vh;
-    margin-left:17rem;
+    margin-left:1rem;
+    margin-right:1rem;
+    padding:0rem 1rem 3rem 15rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
     transition: .5s;
-    
+    background-color: var(--off-white);
+    z-index: -1;
 }
 
 
 .home {
     padding:.5rem 0rem;
+
 }
 
 .btnClass {
@@ -192,8 +208,7 @@ nav {
 
 .myName {
     font-size:5.7em;
-text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
-    
+    text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
 }
 
 .socials a {
@@ -204,8 +219,10 @@ text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
 /* Project Section */
 
 .projectContainer {
-    margin-right: 11rem;
-    margin-left: 13rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    /* background-color: red; */
+    padding:0rem 13rem;
 }
 
 .contentHeader {
@@ -254,9 +271,6 @@ hr {
     text-shadow: .5px 1.5px 1px rgba(0,0,0,0.3);
 }
 
-.projectText {
-   
-}
 
 .projectSubTitle {
     font-size: 2rem;
@@ -429,19 +443,21 @@ footer {
 
 @media (max-width: 55.625em) {
 
+    /* body {
+        margin:0rem 1rem;
+    } */
     /* Home Section Queries  */
     .homeContainer {
-        min-height: 100vh;
-        margin-left: 2rem;
-       
-        width:100%;
-        transition: .5s;
-    
+      padding:0rem 2rem;
+      margin:0rem;
+    }
+
+    .contactBtn {
+        font-size: 1rem;
     }
 
     .home {
         font-size: 2rem;
-        margin-right: 1rem;
     }
 
     .myName {
@@ -449,8 +465,11 @@ footer {
         
     }
 
-    body {
-        margin:2.3rem;
+    .contactHeader {
+        font-size: 3rem;
+    }
+    .contentHeader {
+        font-size: 3rem;
     }
 
     /* Project Queries  */
@@ -467,21 +486,29 @@ footer {
     
       
     }
+    .projectContainer {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        /* background-color: red; */
+        padding:0rem 1.5rem;
+    
+    }
+    
     .projectList {
         display: grid;
         grid-template-columns: 1fr;
-        grid-column-gap: 0px;
-        place-content: center;
         margin-top: 4rem;
         margin-left: 0rem;
-        margin-right:none;
+        margin-right:0rem;
         
     }
     .projectContainer {
             margin-right: 2rem;
             margin-left: 2rem;
+            
         }
     
+        /* Contact Queries  */
     #form {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -501,7 +528,6 @@ footer {
         font-weight:300;
         position: fixed;
         transition: top 0.5s;
-        background-color: #fcfbf9b0;
     }
 
     
@@ -509,39 +535,34 @@ footer {
         padding:0rem .5rem;
         
     }
-
+}
 
 @media screen and (min-width: 1700px) {
     /* For Large screens */
+  
     .homeContainer {
-        font-size:1.2rem;
-        margin-left: 26rem;
-        transition: .5s;
-    } 
- 
+        min-height: 95vh;
+        padding:0rem 1rem 4rem 25rem;
+        font-size: 1.2rem;
       
-  #form {
-    margin-left: 25%;
-    margin-right: 25%;
-    height:34rem;
+    }
+      
+    #form {
+        margin-left: 25%;
+        margin-right: 25%;
+        height:40rem;
     /* width: 500px;
     margin: 50px auto 100px auto; */
-  }
+    }
 
-  .contactHeader {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
+    .contactHeader {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
 
-
-  .projectContainer {
-    margin-right: 17rem;
-    margin-left: 19rem;
+    .projectContainer {
+        padding:0rem 20rem;
+        /* margin-right: 17rem;
+        margin-left: 19rem; */
+    }
 }
-
-
-}
-
-
-
-
