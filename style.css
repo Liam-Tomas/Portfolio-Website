@@ -142,13 +142,14 @@ nav {
 
 .homeContainer {
     min-height: 95vh;
-
-    margin-left: 17rem;
+    margin-left:17rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
     transition: .5s;
+    
 }
+
 
 .home {
     padding:.5rem 0rem;
@@ -340,7 +341,7 @@ hr {
 
   textarea {
     width: 100%;
-    height: 20rem;
+    height: 17rem;
     background: transparent;
     outline: none;
     font-family: 'Lato', sans-serif;
@@ -391,7 +392,7 @@ hr {
     }
   
   #submit:hover {
-    color: #777777;
+    color: #777777
   }
 
 
@@ -428,38 +429,42 @@ footer {
 
 @media (max-width: 55.625em) {
 
+    /* Home Section Queries  */
     .homeContainer {
         min-height: 100vh;
-        width:70%;
-        margin-left: 3rem;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
+        margin-left: 2rem;
+       
+        width:100%;
+        transition: .5s;
+    
     }
 
+    .home {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
 
-    .subTitle {
-        font-size:1.8rem;
-    }
-    
-    .smallHeader {
-        font-size:1.8rem
-    }
-    
     .myName {
-        font-size:3.5em;
+        font-size:3rem;
+        
     }
 
+    body {
+        margin:2.3rem;
+    }
+
+    /* Project Queries  */
     
     .bottom-nav {
         font-size: .7rem;
-        padding: .2rem .2rem;  
+        padding: 0.2rem 0.2rem;  
         
         
     }
     .bottom-nav2 {
         font-size: .7rem;
-        padding: .2rem .2rem;  
+        padding: 0.2rem 0.2rem;  
+    
       
     }
     .projectList {
@@ -477,13 +482,6 @@ footer {
             margin-left: 2rem;
         }
     
-    .contentHeader {
-        font-size: 2.5rem;
-        margin-left: 0rem;
-        margin-top: 0rem;
-        padding-top:0rem;
-       
-    }
     #form {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -493,7 +491,24 @@ footer {
         margin: 0rem;
         margin-left:2rem;
     }
-}
+
+    /* Nav Queries  */
+
+    nav {
+        display:flex;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight:300;
+        position: fixed;
+        transition: top 0.5s;
+        background-color: #fcfbf9b0;
+    }
+
+    
+    .navBar {
+        padding:0rem .5rem;
+        
+    }
 
 
 @media screen and (min-width: 1700px) {
