@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Liam's Site</title>
 </head>
@@ -19,7 +20,7 @@
                 <a href="" class="navBar homeBtn">Home</a>
             </li>
             <li class="">
-                <a href="" class="navBar projectBtn">Projects</a>
+                <a href="#projectMain" class="navBar projectBtn">Projects</a>
             </li>
             <li class="">
                 <a href="" class="navBar resumeBtn">Resume</a>
@@ -38,19 +39,88 @@
     </div>
     <div class="bottom-nav">
         <p>
-          &copy; Created by
-          <a href="https://www.freecodecamp.com/" target="_blank">
-            <span>Liam Armstrong→</span></a>
+            &copy; Created by
+            <a href="" target="_blank">
+                <span>Liam Armstrong→</span></a>
         </p>
-      </div>
-    
-      <div class="bottom-nav2">
-        <p>ltarmstrong94@gmail.com→</p>
-      </div>
-
-    <div class="mainContainer projectContainer">
-        <h1 class="projectHeader">Projects</h1>
     </div>
+
+    <div class="bottom-nav2">
+        <p>ltarmstrong94@gmail.com→</p>
+    </div>
+
+    <div class="projectContainer" id="projectMain">
+        <h1 class="contentHeader">Projects</h1>
+        <hr class="headerLine">
+        <div class="projectList">
+            <div class="projectImg">
+                <img src="images/project-pic.png" alt="">
+            </div>
+            <div class="projectDescrip">
+                <h2 class="projectTitle">Name of my Cool Project.</h2>
+                <p class="projectSubTitle">Description of my cool project.</p>
+                <p class="projectSubText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, dolore!
+                    Suscipit doloribus deserunt fugiat beatae corrupti eius ipsam earum omnis, neque sequi architecto
+                    temporibus voluptatem nam nihil corporis, dolore ut!</p>
+            </div>
+        </div>
+    </div>
+    <div class="projectContainer">
+        <hr>
+        <div class="projectList">
+            <div class=projectText>
+                <h2 class="projectTitle">Name of my Cool Project.</h2>
+                <p class="projectSubTitle">Description of my cool project.</p>
+                <p class="projectSubText projectMidSubText">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat, dolore!
+                    Suscipit doloribus deserunt fugiat beatae corrupti eius ipsam earum omnis, neque sequi architecto
+                    temporibus voluptatem nam nihil corporis, dolore ut!</p>
+            </div>
+            <div class="projectDescrip">
+                <img src="images/project-pic2.jpeg" alt="" class="projectImg">
+            </div>
+        </div>
+    </div>
+    <div class="projectContainer" id="projectMain">
+        <hr>
+        <div class="projectList">
+            <div class="projectImg">
+                <img src="images/project-pic3.jpeg" alt="">
+            </div>
+            <div class="projectDescrip">
+                <h2 class="projectTitle">Name of my Cool Project.</h2>
+                <p class="projectSubTitle">Description of my cool project.</p>
+                <p class="projectSubText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, dolore!
+                    Suscipit doloribus deserunt fugiat beatae corrupti eius ipsam earum omnis, neque sequi architecto
+                    temporibus voluptatem nam nihil corporis, dolore ut!</p>
+            </div>
+        </div>
+    </div>
+    <div class="moreBtnContainer">
+        <div class="moreBtn">See More</div>
+    </div>
+
+    <div class="contactContainer">
+        <h1 class="contentHeader contactTitle">Get in Touch</h1>
+        <hr class="headerLine">
+    </div>
+    <header>Send me a message:</header>
+
+    <form id="form" class="topBefore">
+        <div class="formContainer">
+            <input id="name" type="text" placeholder="NAME" class="formName">
+            <input id="email" type="text" placeholder="E-MAIL">
+            <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+            <input id="submit" type="submit" value="Send!">
+        </div>
+    </form>
+
+
+
+
+
+    <script src="app.js"></script>
 </body>
+
 
 </html>

@@ -47,8 +47,10 @@ blockquote, q {
 
 /* ---------------------------------------------------------------------------- */
 
+html {
+    scroll-behavior: smooth;
 
-
+}
 
 
 * {
@@ -67,48 +69,60 @@ a {
     text-decoration: none; /* no underline */
   }
 
+
+
 /* Nav Bar */
 
 nav {
     display:flex;
     justify-content: space-between;
-    border: 1px solid black;
-    font-size: 1.5rem;
-    padding: .5rem;
-    
+    font-size: 1.7rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.5s;
 }
 
 .navList {
     display: flex;
+    padding:1rem 1.9rem;
+
 }
 
 .navBar {
-    padding:0rem .5rem;
+    padding:0rem 1rem;
+    
 }
+
+.navBar:hover {
+    background-color: rgba(128, 128, 128, 0.082);
+}
+
 
 
 /* Bottom Nav */
 
 .bottom-nav {
-    color:var(--slate);
+    color:grey;
     position:fixed;
     writing-mode: vertical-rl;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     bottom: 0;
     left: 0;
-    padding: .2rem .6rem;  
+    padding: .2rem 1.9rem;  
     z-index: -1;
     
 }
 
 .bottom-nav2 {
-    color:var(--slate);
+    color:grey;
     position:fixed;
     writing-mode: vertical-rl;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     bottom: 0;
     right: 0;
-    padding: .2rem .6rem;  
+    padding: .2rem 1.9rem;  
     z-index: -1;
 }
 
@@ -116,7 +130,8 @@ nav {
 /* Home Page  */
 
 .mainContainer {
-   
+    /* font-size: 3.5rem;
+    margin-left: 19rem; */
   
 }
 
@@ -127,6 +142,7 @@ nav {
     display:flex;
     flex-direction: column;
     justify-content: center;
+    transition: .5s;
 }
 
 .home {
@@ -137,31 +153,230 @@ nav {
     border: 1px solid black;
     border-radius: 5px;
     display: inline-block;
-    padding:.3rem 1rem;
+    padding:.4rem 1.2rem;
     font-size: 2.5rem;
     margin-top: 1rem;
 }
 
+.contactBtn:hover {
+    background-color:rgba(128, 128, 128, 0.075);
+    cursor: pointer;
+}
+
 .subTitle {
-    font-size:2.5rem;
+    font-size:2.7rem;
 }
 
 .smallHeader {
-    font-size:2.5rem
+    font-size:2.7rem
 }
 
 .myName {
-    font-size:5.5em;
+    font-size:5.7em;
 }
 
 
 /* Project Section */
 
 .projectContainer {
-    font-size: 3rem;
-    margin-left: 19rem;
-    margin-top: 3rem;
+    margin-right: 130px;
+ 
 }
+
+.contentHeader {
+    font-size: 3.5rem;
+    margin-left: 19rem;
+    margin-top: 5rem;
+}
+
+hr {
+    margin-left: 14rem;
+    margin-top:4rem;
+    margin-bottom:5rem;
+}
+.projectList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0px;
+    margin-top: 4rem;
+    margin-left: 14rem;
+    
+}
+.projectList img {
+    height:90%;
+    width:90%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+
+
+.headerLine {
+    width:100px;
+    margin-bottom: 2rem;
+    margin-top: 1.2rem;
+    margin-left: 3rem;
+    margin-left: 19rem;
+}
+
+.projectTitle {
+    font-size: 3rem;
+    margin-bottom:1rem;
+}
+
+.projectText {
+   
+}
+
+.projectSubTitle {
+    font-size: 2rem;
+
+}
+
+.projectSubText {
+    margin-top:1rem;
+    font-size:1.5rem;
+   
+}
+
+.projectMidSubText {
+    padding-right:60px;
+}
+
+.moreBtn {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    border:1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    padding:.4rem 1.2rem;
+    text-align: center;
+}
+
+.moreBtnContainer {
+    display: flex;
+    justify-content: center;
+    margin-top:4rem;
+}
+.moreBtn:hover {
+    background-color: rgba(128, 128, 128, 0.171);
+    cursor: pointer;
+}
+/* Contact section */
+
+.contactTitle {
+    margin-top: 12rem;
+}
+
+  header {
+    margin-left:19rem;
+    margin-top: 4rem;
+    margin-bottom:1rem;
+    font-size: 1.3em;
+    color:#292929;
+  }
+  
+  #form {
+    position: relative;
+    margin-left: 19rem;
+    height:34rem;
+    /* width: 500px;
+    margin: 50px auto 100px auto; */
+  }
+
+  .formContainer {
+      border: .01px solid rgba(99, 99, 99, 0.5);
+      width: 880px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  input {
+      
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;   
+    width: 850px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    background: transparent;
+    outline: none;
+    color: #726659;
+    border:none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+
+ .formName {
+
+    border-bottom: solid 1px #b3aca7;
+  }
+
+    
+  textarea {
+    width: 850px;
+    max-width: 850px;
+    height: 200px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;   
+    border:none;
+    border-top: solid .1px #b3aca7;
+    border-bottom: solid .1px #b3aca7;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  input:hover {
+    background: #b3aca744;
+    color: #2b2b2b;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #aca49c;
+    font-size: 0.875em;
+  }
+  
+  input:focus::placeholder, textarea::focus:placeholder {
+    color: #bbb5af;
+  }
+  
+  /* on hover placeholder */
+  input:hover::placeholder, textarea:hover::placeholder {
+    color: #c0c0c0;
+    font-size: 0.875em;
+  }
+  
+  
+  
+  textarea:hover {
+    background: #b3aca744;
+    color: #2b2b2b;
+  }
+  
+  #submit {
+  
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;   
+    outline:none;
+    cursor: pointer;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color:black;
+  }
+  
+  #submit:hover {
+    color: #c0c0c0;
+  }
+
+
 
 
 
@@ -185,6 +400,7 @@ nav {
         font-size: 3rem;
         margin-left: 4rem;
         margin-top: 3rem;
+
     }
     .subTitle {
         font-size:1.8rem;
@@ -197,7 +413,17 @@ nav {
     .myName {
         font-size:3.5em;
     }
-    
+    .bottom-nav {
+        font-size: .8rem;
+        padding: .2rem .9rem;  
+        
+        
+    }
+    .bottom-nav2 {
+        font-size: .8rem;
+        padding: .2rem .9rem;  
+      
+    }
 }
 
 
