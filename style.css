@@ -121,7 +121,7 @@ nav {
 .navBar {
     padding:0rem 1rem;
     color:var(--dark-blue);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .navBar:hover {
@@ -207,7 +207,7 @@ nav {
     display: inline-block;
     padding:.7rem 1.5rem;
     font-size: 1.7rem;
-    font-weight: 100;
+    font-weight: 300;
     margin-top: 1.8rem;
     transition:.3s;
     color: var(--dark-blue);
@@ -548,15 +548,12 @@ footer {
         padding-top:2rem;
     }
 
-    .projectMidSubText {
+    .middleText {
         padding:0rem;
-        padding-bottom: 2.5rem;
+        padding-bottom: 2rem;
     }
 
-    .contactBtn {
-        font-weight: 400;
-    }
-
+    
 
         /* Contact Queries  */
     #form {
