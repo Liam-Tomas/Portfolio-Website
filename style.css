@@ -48,7 +48,8 @@ blockquote, q {
     --dark-green:#4D724D;  */
     /* --light-grey:#F5F5F5;  */
     --off-white:#f5f5f6;
-    --white-dark: #e1e2e1a8;
+    /* --white-dark: #e1e2e1a8; */
+    --white-dark: #eceff7;
     --grey: #37474f;
     --light-grey: #62727b;
     --dark-grey: #102027;
@@ -73,7 +74,8 @@ html {
 body {
     line-height: 1;
     background-color: var(--white-dark);
-    font-family: Open Sans, sans-serif;
+    /* font-family: Open Sans, sans-serif; */
+    font-family: 'Montserrat', sans-serif;
     z-index: 10;
 }
 
@@ -97,12 +99,13 @@ nav {
     left: 0;
     width: 100%;
     transition: top 0.5s;
-    background-color:var(--white-dark);
+    background-color:#eceff7d8;
  
 }
 
 .navList {
     display: flex;
+    justify-content: space-between;
     padding:1rem 1.9rem;
 
 }
@@ -113,7 +116,7 @@ nav {
 }
 
 .navBar:hover {
-    background-color: rgba(128, 128, 128, 0.082);
+   background-color: rgba(128, 128, 128, 0.082);
 }
 
 
@@ -122,7 +125,7 @@ nav {
 
 .bottom-nav {
     color:var(--white-dark);
-    text-shadow: .6px .4px .5px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px .1px rgba(0,0,0,0.3);
     position:fixed;
     writing-mode: vertical-rl;
     font-size: 1.2rem;
@@ -135,7 +138,7 @@ nav {
 
 .bottom-nav2 {
     color:var(--white-dark);
-    text-shadow: .6px .4px .5px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px .1px rgba(0,0,0,0.3);
     position:fixed;
     writing-mode: vertical-rl;
     font-size: 1.2rem;
@@ -145,6 +148,9 @@ nav {
     z-index: 0;
 }
 
+.footName {
+    font-weight:100;
+}
 
 /* Home Page  */
 
@@ -174,12 +180,12 @@ nav {
 }
 
 .btnClass {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(143, 151, 160, 0.3) 0px 1px 2px 2px, rgba(153, 163, 170, 0.15) 0px 2px 6px 2px;
     border-radius: 12px;
     display: inline-block;
     padding:.6rem 1.3rem;
     font-size: 2.1rem;
-    font-weight: 100;
+    font-weight: 200;
     margin-top: 1.5rem;
 }
 
@@ -189,28 +195,30 @@ nav {
     display: inline-block;
     padding:.7rem 1.5rem;
     font-size: 1.7rem;
-    font-weight: 100;
+    font-weight: 200;
     margin-top: 1.8rem;
+    transition:.3s;
 }
 
 .contactBtn:hover {
-    background-color:rgba(128, 128, 128, 0.075);
+    background-color:rgba(236, 214, 206, 0.329);
     cursor: pointer;
 }
 
 .subTitle {
     font-size:2.7rem;
-    font-weight:100;
+    font-weight:400;
 }
 
 .smallHeader {
     font-size:2.7rem;
-    font-weight:100;
+    font-weight:400;
 }
 
 .myName {
     font-size:5.7em;
-    text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
+    text-shadow: .5px 1.5px 1px rgba(0,0,0,0.3);
+    font-weight:500;
 }
 
 .socials a {
@@ -244,7 +252,7 @@ hr {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 0px;
     margin-top: 4rem;
-    
+    font-weight: 300;
 }
 .projectList img {
     height:90%;
@@ -292,12 +300,14 @@ hr {
 .moreBtn {
     font-size: 1.6rem;
     padding:.7rem 1.2rem;
+    background-color: var(--off-white);
+    transition:.3s;
 }
 
 .moreBtnContainer {
     display: flex;
     justify-content: center;
-    margin-top:5rem;
+    margin-top:3rem;
 }
 .btnClass:hover {
     background-color: rgba(128, 128, 128, 0.171);
@@ -323,9 +333,9 @@ hr {
   #form {
     margin-left: 19rem;
     margin-right: 19rem;
-    height: 36rem;
-    /* width: 500px;
-    margin: 50px auto 100px auto; */
+    margin-bottom: 5rem;
+    background-color: var(--off-white);
+    border-radius: 15px;
   }
 
   .formContainer {
@@ -405,10 +415,12 @@ hr {
     cursor: pointer;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    transition:.5s;
     }
   
   #submit:hover {
-    color: #777777
+    color: #777777;
+    background-color:rgba(236, 214, 206, 0.329);
   }
 
 
@@ -420,22 +432,28 @@ footer {
     display: flex;
     justify-content: space-evenly;
     padding: 0rem;
-    background: var(--darker-teal);
+    color:var(--white-dark);
+    text-shadow: 1px 1px .1px rgba(0,0,0,0.3);
     /* border-top: 4px solid var(--main-red); */
-    z-index: 10;
+    font-size: 1.4rem;
   
   }
 
   footer > p {
     margin: 1.2rem;
-    color:var(--lighter-teal)
+   
   }
   
   footer i {
     vertical-align: middle;
-
+    color:var(--white-dark);
+    text-shadow: 1px 1px .1px rgba(0,0,0,0.3);
   }
 
+  .footerText {
+    color:var(--white-dark);
+    text-shadow: 3px 1px .1px rgba(0,0,0,0.3);
+  }
 
 
 
@@ -520,7 +538,8 @@ footer {
     #form {
         margin-left: 2rem;
         margin-right: 2rem;
-        height:32rem;
+        margin-bottom: 4rem;
+        background-color: var(--off-white);
       }
     .contactHeader {
         margin: 0rem;
@@ -558,7 +577,7 @@ footer {
     #form {
         margin-left: 25%;
         margin-right: 25%;
-        height:40rem;
+        margin-bottom: 10rem;
     /* width: 500px;
     margin: 50px auto 100px auto; */
     }
