@@ -113,7 +113,7 @@ nav {
 .navList {
     display: flex;
     justify-content: space-between;
-    padding:1rem 1.9rem;
+    padding:1.5rem 1.9rem;
     
 
 }
@@ -129,12 +129,11 @@ nav {
 }
 
 
-
 /* Bottom Nav */
 
 .bottom-nav {
     color:var(--white-dark);
-    text-shadow: 1px 1px .1px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px .1px rgba(0, 0, 0, 0.829);
     position:fixed;
     writing-mode: vertical-rl;
     font-size: 1.2rem;
@@ -147,7 +146,7 @@ nav {
 
 .bottom-nav2 {
     color:var(--white-dark);
-    text-shadow: 1px 1px .1px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px .1px rgba(0, 0, 0, 0.829);
     position:fixed;
     writing-mode: vertical-rl;
     font-size: 1.2rem;
@@ -179,12 +178,18 @@ nav {
     flex-direction: column;
     justify-content: center;
     transition: .5s;
-    background-color: #ffffff;
+    background-color: var(--white-dark);
     z-index: -1;    
     color:black;
     color: var(--dark-blue);
 }
+.logo {
+    font-size:2.2rem;
+}
 
+.logo:hover {
+    font-weight: 600;
+}
 
 .home {
     padding:.5rem 0rem;
@@ -211,6 +216,7 @@ nav {
     margin-top: 1.8rem;
     transition:.3s;
     color: var(--dark-blue);
+    background-color: white;
 }
 
 .contactBtn:hover {
@@ -219,21 +225,21 @@ nav {
 }
 
 .subTitle {
-    font-size:2.7rem;
-    font-weight:500;
+    font-size:3rem;
+    font-weight:400;
  
 }
 
 .smallHeader {
-    font-size:2.7rem;
-    font-weight:500;
+    font-size:3rem;
+    font-weight:400;
     
 }
 
 .myName {
-    font-size:5.7em;
+    font-size:5em;
     /* text-shadow: .5px 1.5px 1px rgba(0,0,0,0.3); */
-    font-weight:600;
+    font-weight:500;
 }
 
 .socials a {
@@ -344,7 +350,6 @@ hr {
     padding-top:2rem;
     font-weight: 400;
     text-shadow: .5px 1.5px 1px rgba(0,0,0,0.3);
- 
 }
   
   #form {
@@ -450,7 +455,7 @@ footer {
     justify-content: space-evenly;
     padding: 0rem;
     color:var(--white-dark);
-    text-shadow: 1px 1px .1px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px .1px rgba(0, 0, 0, 0.829);
     /* border-top: 4px solid var(--main-red); */
     font-size: 1.4rem;
   
@@ -495,6 +500,7 @@ footer {
     }
     .contactBtn {
         font-size: 1rem;
+    
     }
 
     .home {
