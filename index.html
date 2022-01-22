@@ -24,7 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
+    <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
     <title>Liam's Site</title>
 </head>
 
@@ -32,18 +34,18 @@
 
     <nav>
         <div class="navList">
-            <a href="#homeMain" class="logo">"LTA"</a>
+            <a href="#homeMain" class="logo">LA</a>
         </div>
         <ul class="navList">
             <li class="">
-                <a href="#projectMain" class="navBar projectBtn">Projects</a>
+                <a href="#projectMain" class="navBar projectBtn"><span class="navNum1">1. </span> Projects</a>
             </li>
             <li class="">
-                <a href="#contactMain" class="navBar homeBtn">Contact</a>
+                <a href="#contactMain" class="navBar homeBtn"><span class="navNum2">2. </span> Contact</a>
             </li>
 
             <li class="">
-                <a href="" class="navBar resumeBtn">Resume</a>
+                <a href="" class="navBar resumeBtn"><span class="navNum3">3. </span> Resume</a>
             </li>
         </ul>
 
@@ -51,15 +53,15 @@
 
     <div class="mainContainer homeContainer" id="homeMain">
         <p class="home smallHeader">Hi, my name is</p>
-        <h1 class="home myName">Liam Armstrong</h1>
-        <p class="home subTitle">I'm a Software Developer from the Bay Area.</p>
+        <h1 class="home myName">Liam Armstrong<span class="spanPeriod">.</span></h1>
+        <p class="home subTitle">I'm a Software Developer from the Bay Area<span>.</span></p>
 
         <div class="socials ">
             <a id="profile-link" href="https://github.com/Liam-Tomas" class="contactBtn github" target="_blank" "><i
-                    class=" fab fa-github"></i> GitHub</a>
+                    class=" fab fa-github fa-2x"></i></a>
+            <a href=" " class="contactBtn linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
             <a href="mailto:ltarmtrong94@gmail.com" class="contactBtn email contact-details"><i
-                    class="far fa-paper-plane"></i>Email</a>
-            <a href=" " class="contactBtn linkedin"><i class="fab fa-linkedin "></i> LinkedIn</a>
+                    class="far fa-paper-plane fa-2x"></i></a>
         </div>
 
     </div>
@@ -76,8 +78,10 @@
     </div>
 
     <div class="projectContainer" id="projectMain">
-        <h1 class="contentHeader">My Projects</h1>
-        <hr class="headerLine1">
+        <div class="contentHeader">
+            <h1>My Projects</h1>
+            <hr class="headerLine1">
+        </div>
         <div class="projectList">
             <div class="projectImg">
                 <img src="images/project-pic.png" alt="">
@@ -97,7 +101,8 @@
             <div class=projectText>
                 <h2 class="projectTitle projectMidSubText">Another Project.</h2>
                 <p class="projectSubTitle projectMidSubText">Description of my cool project.</p>
-                <p class="projectSubText projectMidSubText middleText">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p class="projectSubText projectMidSubText middleText">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
                     Repellat, dolore!
                     Suscipit doloribus deserunt fugiat beatae corrupti eius ipsam earum omnis, neque sequi architecto
                     temporibus voluptatem nam nihil corporis, dolore ut!</p>
