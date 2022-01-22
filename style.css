@@ -50,6 +50,7 @@ blockquote, q {
     /* --off-white:#f5f5f6; */
     --off-white:#ffffff;
     --light-teal:#aadcec;
+    --light-teal-hover:#aadbec63;
     /* --white-dark: #e1e2e1a8; */
     /* --white-dark: #eceff7; */
     --white-dark: #f4f9fc;
@@ -58,15 +59,20 @@ blockquote, q {
     --dark-grey: #102027;
     --green: #9ccc64;
     --dark-green: #6b9b36;
-    --light-green: #cfff94;
+    --light-green: #9bdabe;
+    --light-green-fade: #9bdabe73;
     --dark-blue: #0a1242;
+    --dark-blue-faded: #0a124242;
     --light-pink:#fff7f7;
+    --purple:#7f00e0;
+    --purpleMed:#7f00e050;
+    --purple-faded:#7f00e025;
   }
  
 
 html {
     scroll-behavior: smooth;
-
+background-color: white;
 }
 
 
@@ -84,7 +90,8 @@ body {
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Bitter', serif;
     z-index: 10;
-    color:var(--dark-blue)
+    color:var(--dark-blue);
+    margin:1.5rem 1.5rem;
 }
 
 
@@ -100,38 +107,43 @@ a {
 nav {
     display:flex;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight:300;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transition: top 0.5s;
-    background-color:#ffffff;
-    box-shadow: rgba(143, 151, 160, 0.3) 0px 1px 2px 2px, rgba(153, 163, 170, 0.15) 0px 2px 6px 2px;
+    /* box-shadow: rgba(143, 151, 160, 0.3) 0px 1px 2px 2px, rgba(153, 163, 170, 0.15) 0px 2px 6px 2px; */
    
 }
 
 .navList {
     display: flex;
     justify-content: space-between;
-    padding:.8rem 1.9rem;
-    padding-top:1.1rem;
-    
+    padding:3rem 3.5rem 2rem 2.5em;   
+  
 
 }
 
 .navBar {
-    padding:0rem 1rem;
+    padding:.5rem 1.3rem;
     color:var(--dark-blue);
     font-weight: 400;
+    background-color: var(--white-dark);
+    border-radius: 5px;
+    transition:.5s;
 }
 
 .navBar:hover {
-    background-color: var(--light-teal);
+    background-color: var(--light-teal-hover);
+   border-radius: 5px;
 }
 .logo {
-    font-size:1.9rem;
+    font-size:2.1rem;
+    font-weight: 400;
+    padding:.5rem 1.3rem;
+    transition:.5s;
 }
 
 /* Bottom Nav */
@@ -139,32 +151,33 @@ nav {
 .bottom-nav {
     /* color:var(--white-dark);
     text-shadow: 1px 1px .1px rgba(0, 0, 0, 0.829); */
-    color:rgba(165, 165, 165, 0.589);
+    color:rgba(128, 128, 128, 0.432);
     position:fixed;
     writing-mode: vertical-rl;
     font-size: 1.2rem;
     bottom: 0;
     left: 0;
-    padding: .2rem 1.9rem;  
+    padding:2.1rem 2.5rem 1rem 4rem;   
     z-index: 0;
     
 }
 
 .bottom-nav2 {
     /* color:var(--white-dark);
-    text-shadow: 1px 1px .1px rgba(0, 0, 0, 0.829); */
-    color:rgba(165, 165, 165, 0.589);
+    /* text-shadow: 1px 1px .1px rgba(0, 0, 0, 0.829); */ 
+    /* color:rgba(165, 165, 165, 0.589); */
+    color:rgba(128, 128, 128, 0.432);
     position:fixed;
     writing-mode: vertical-rl;
     font-size: 1.2rem;
     bottom: 0;
     right: 0;
-    padding: .2rem 1.9rem;  
+    padding:2.1rem 4rem 1rem 1rem;   
     z-index: 0;
 }
 
 .footName {
-    font-weight:100;
+    
     color:var(--dark-blue)
 }
 
@@ -180,7 +193,7 @@ nav {
     min-height: 95vh;
     margin-left:1rem;
     margin-right:1rem;
-    padding:0rem 1rem 3rem 15rem;
+    padding:0rem 1rem 3rem 14rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -194,6 +207,8 @@ nav {
 
 .logo:hover {
     font-weight: 400;
+    background-color: var(--purple-faded);
+    border-radius:5px;
 }
 
 .home {
@@ -222,14 +237,35 @@ nav {
     transition:.3s;
     color: var(--dark-blue);
     background-color: white;
-
-  
    
 }
 
 .contactBtn:hover {
-    background-color:var(--light-teal);
+    background-color:var(--light-teal-hover);
     cursor: pointer;
+}
+
+.github {
+    background-color: var(--light-teal-hover);
+}
+
+.github:hover {
+    background-color:var(--light-teal);
+}
+
+.email {
+    background-color: var(--purple-faded);
+}
+
+.email:hover {
+    background-color: var(--purpleMed);
+}
+
+.linkedin {
+    background-color: var(--light-green-fade);
+}
+.linkedin:hover {
+    background-color: var(--light-green);
 }
 
 .subTitle {
@@ -284,6 +320,9 @@ hr {
     padding-top: 5rem;
     padding-bottom: 3rem;
 }
+hr {
+  
+}
 .projectList img {
     height:90%;
     width:90%;
@@ -295,7 +334,7 @@ hr {
 
 .headerLine1 {
     width:100px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     margin-top: 1.2rem;
 }
 
@@ -337,10 +376,10 @@ hr {
 .moreBtnContainer {
     display: flex;
     justify-content: center;
-    margin-top:3rem;
+    margin-top:0rem;
 }
 .btnClass:hover {
-    background-color: var(--light-teal);
+    background-color: var(--purple-faded);
     cursor: pointer;
 }
 
@@ -411,7 +450,7 @@ hr {
   }
   
   input:hover {
-    background: #b3aca717;
+    background: var(--light-green-fade);
     color: #2b2b2b;
   }
 
@@ -434,7 +473,7 @@ hr {
   
   
   textarea:hover {
-    background: #b3aca717;
+    background: var(--light-green-fade);
     color: #000000;
   }
   
@@ -447,11 +486,12 @@ hr {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     transition:.5s;
+    letter-spacing: 2px;
     }
   
   #submit:hover {
     color: #777777;
-    background-color:var(--light-teal)
+    background-color:var(--purple-faded)
   }
 
 
@@ -484,6 +524,48 @@ footer {
     /* color:var(--white-dark);
     text-shadow: 3px 1px .1px rgba(0,0,0,0.3); */
     color:rgba(165, 165, 165, 0.589);
+  }
+
+
+
+/* Hover Nav effect  */
+
+
+.navBar {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .navBar:before, .navBar:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: var(--purple);
+  }
+  
+  .navBar:before {
+    left: -2.5px;
+  }
+  .navBar:after {
+    right: 2.5px;
+    background: var(--purple);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  .navBar:hover:before {
+    background: var(--purple);
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  .navBar:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
   }
 
 
@@ -599,8 +681,11 @@ footer {
 
     .logo {
         font-size:1rem;
+        padding:0rem;
     }
-    
+    .navList {
+        padding:2rem;
+    }
     .navBar {
         padding:0rem .5rem;
         
