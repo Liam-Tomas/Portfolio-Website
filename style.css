@@ -224,7 +224,7 @@ nav {
     min-height: 95vh;
     margin-left:1rem;
     margin-right:1rem;
-    padding:0rem 0rem 0rem 15rem;
+    padding:0rem 10rem 0rem 15rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -318,7 +318,7 @@ nav {
     margin-right: 1rem;
     margin-left: 1rem;
     /* background-color: red; */
-    padding:0rem 12rem;
+    padding:0rem 11rem;
 }
 
 .contentHeader {
@@ -364,33 +364,30 @@ nav {
     margin-top: 1.2rem;
     transition:1s;
 }
-
 .projectContainer:hover .headerLine1 {
     width:300px;
     cursor: pointer;
 }
-
 .contactContainer:hover .headerLine2 {
     width:330px;
     cursor: pointer;
 }
-
 .projectTitle {
     font-size: 2.5rem;
-    padding-bottom:1rem;
+    padding-bottom:0rem;
     font-weight: 400;
 }
-
-
 .projectSubTitle {
     font-size: 2rem;
-
+}
+.projectSubText {
+    font-size:1.4em;
+    font-weight: 300;
+    color:black;
 }
 
-.projectSubText {
-    margin-top:1rem;
-    font-size:1.5rem;
-   
+.projectText {
+    padding: .3rem 0rem;
 }
 
 .projectMidSubText {
@@ -414,7 +411,9 @@ nav {
     cursor: pointer;
 }
 
-
+.codeLogos i {
+    padding:.2rem 1rem 0rem 0rem;
+}
 
 
 /* Contact section */
@@ -749,6 +748,15 @@ footer {
         padding:0rem 11rem 0rem 16rem;
         /* margin-right: 17rem;
         margin-left: 19rem; */
+    }
+    .projectTitle {
+        font-size:3rem;
+    }
+    .projectSubText {
+        font-size: 1.8rem;
+    }
+    .projectSubTitle {
+        font-size:2.5rem;
     }
     .bottom-nav {
         font-size: 1.6rem;        
