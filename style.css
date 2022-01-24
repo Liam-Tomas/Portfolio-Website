@@ -51,9 +51,6 @@ blockquote, q {
     /* --white-dark: #e1e2e1a8; */
     /* --white-dark: #eceff7; */
     --white-dark: #f4f9fc;
-    --grey: #37474f;
-    --light-grey: #62727b;
-    --dark-grey: #102027;
     --green: #9ccc64;
     --green2: #9cdabe;
     --dark-green: #6b9b36;
@@ -62,7 +59,8 @@ blockquote, q {
     --light-green-fade: #9bdabe81;
     --light-green-fademore: #9bdabe33;
     --darkish-blue: #0a1242;
-    --dark-blue: #0f1b61;;
+    --dark-blue: #0f1b61;
+    --dark-blue-faded2: #0f1b61ad;
     --dark-blue-faded: #0a124242;
     --light-pink:#fff7f7;
     --purple:#7f00e0;
@@ -79,7 +77,7 @@ blockquote, q {
 
 html {
     scroll-behavior: smooth;
-background-color: white;
+    background-color: white;
 }
 
 
@@ -127,16 +125,12 @@ nav {
     left: 0;
     width: 100%;
     transition: top 0.5s;
-    /* box-shadow: rgba(143, 151, 160, 0.3) 0px 1px 2px 2px, rgba(153, 163, 170, 0.15) 0px 2px 6px 2px; */
-   
 }
 
 .navList {
     display: flex;
     justify-content: space-between;
     padding:3rem 3.5rem 2rem 2.5em;   
-  
-
 }
 
 .navBar {
@@ -148,9 +142,7 @@ nav {
     transition:.5s;
 }
 
-.navBar:hover {
-   border-radius: 35px;
-}
+
 
 .logo {
     font-size:1.9rem;
@@ -162,10 +154,10 @@ nav {
 }
 
 .navNum1 {
-    color: var(--purple);
+    color: var(--light-teal);
 }
 .navNum2 {
-    color:var(--light-teal);
+    color:var(--green2);
 }
 .navNum3 {
     color: var(--light-green);
@@ -175,6 +167,13 @@ nav {
     font-weight:600;
     padding-right:.3rem;
 }
+
+.resumeBtn {
+    border:1.5px solid var(--purple);
+}
+.resumeBtn:hover {
+    /* background-color: var(--light-green-fade); */
+ }
 
 /* Bottom Nav */
 
@@ -207,8 +206,8 @@ nav {
 }
 
 .footName {
-    
-    color:var(--dark-blue)
+    color:var(--dark-blue);
+    color:rgba(128, 128, 128, 0.432);
 }
 
 /* Home Page  */
@@ -285,15 +284,15 @@ nav {
 }
 
 .subTitle {
-    font-size:2.8rem;
+    font-size:2.6rem;
     font-weight:400;
 }
 .smallHeader {
-    font-size:2.8rem;
+    font-size:2.6rem;
     font-weight:400;   
 }
 .myName {
-    font-size:5rem;
+    font-size:4.8rem;
    
     /* text-shadow: .5px 1.5px 1px rgba(0,0,0,0.3); */
     font-weight:500;
@@ -306,8 +305,6 @@ nav {
 /* Project Section */
 
 .projectContainer {
-    margin-right: 1rem;
-    margin-left: 1rem;
     padding:3rem 11rem 0rem 11rem;
 }
 
@@ -321,8 +318,8 @@ nav {
 .projectList {
     display: flex;
     font-weight: 300;
-    padding-bottom:3rem;
-    padding-top: 3rem;
+    padding-bottom:3.5rem;
+    padding-top: 3.5rem;
 }
 
 .projectList img {
@@ -334,7 +331,6 @@ nav {
 }
 .imageBox {
     margin-right:2rem;
-    
 }
 
 .headerLine1 {
@@ -363,9 +359,9 @@ nav {
     cursor: pointer;
 }
 .projectTitle {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     padding-bottom:0rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 .projectSubTitle {
     font-size: 1.7rem;
@@ -382,11 +378,12 @@ nav {
 }
 
 .projectMidSubText {
-    padding-right:9px;
+    margin-right:10px;
 }
 
 .moreBtn {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 300;
     padding:.7rem 1.2rem;
     background-color: var(--white-dark);
     transition:.3s;
@@ -403,8 +400,55 @@ nav {
 }
 
 .codeLogos i {
-    padding:.2rem 1rem 0rem 0rem;
+    padding:0rem 1rem 0rem 0rem;
 }
+
+/* image hover effect... */
+.imageBox {
+    position: relative;
+    /* text-align: center; */
+   }
+.projectImg {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    top:50;
+    bottom:50;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .imageBox:hover .projectImg {
+    opacity: 0.3;
+  }
+
+  .imageBox:hover .middle {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .text {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 2px, rgba(60, 64, 67, 0.15) 0px ;
+    border-radius: 5px;
+    color: var(--white-dark);
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1rem 1rem;
+    transition:.5s;
+    background-color: var(--dark-blue-faded2);
+  }
+
+  .text:hover {
+    /* border-radius:15px; */
+    background-color: var(--dark-blue);
+  }
 
 
 /* Contact section */
@@ -449,12 +493,10 @@ nav {
     -ms-transition: all 0.3s ease-in-out;
   }
 
-
 .formContainer div {
     padding:1rem;
     border-bottom: solid .1px #b3aca7;
 }
-
 
   textarea {
     width: 100%;
@@ -490,8 +532,6 @@ nav {
     color: #c0c0c0;
     font-size: 0.875em;
   }
-  
-  
   
   textarea:hover {
     background: var(--light-green-fademore);
@@ -562,7 +602,7 @@ footer {
     content: '';
     position: absolute;
     width: 0%;
-    height: 2px;
+    height: 1.5px;
     top: 50%;
     margin-top: -0.5px;
     background: var(--purple);
