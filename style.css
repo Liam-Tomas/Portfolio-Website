@@ -120,7 +120,7 @@ span   {
 nav {
     display:flex;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight:300;
     position: fixed;
     top: 0;
@@ -149,7 +149,6 @@ nav {
 }
 
 .navBar:hover {
-    background-color: var(--light-teal-hover);
    border-radius: 35px;
 }
 
@@ -217,7 +216,6 @@ nav {
 .mainContainer {
     /* font-size: 3.5rem;
     margin-left: 19rem; */
-  
 }
 
 .homeContainer {
@@ -244,7 +242,6 @@ nav {
 
 .home {
     padding:.5rem 0rem;
-
 }
 
 .btnClass {
@@ -262,7 +259,7 @@ nav {
     border-radius: 18px;
     display: inline-block;
     padding:.5rem 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 300;
     margin-top: 1.8rem;
     transition:.3s;
@@ -278,20 +275,13 @@ nav {
 .github {
     background-color: var(--light-teal-hover);
 }
-.github:hover {
-    /* background-color:var(--light-teal); */
-}
+
 .email {
     background-color: var(--pink);
 }
-.email:hover {
-    /* background-color: var(--purpleMed); */
-}
+
 .linkedin {
     background-color: var(--light-green-fade);
-}
-.linkedin:hover {
-    /* background-color: var(--light-green); */
 }
 
 .subTitle {
@@ -303,7 +293,8 @@ nav {
     font-weight:400;   
 }
 .myName {
-    font-size:5em;
+    font-size:5rem;
+   
     /* text-shadow: .5px 1.5px 1px rgba(0,0,0,0.3); */
     font-weight:500;
 }
@@ -317,32 +308,33 @@ nav {
 .projectContainer {
     margin-right: 1rem;
     margin-left: 1rem;
-    /* background-color: red; */
-    padding:0rem 11rem;
+    padding:3rem 11rem 0rem 11rem;
 }
 
 .contentHeader {
     font-size: 3.5rem;
-    margin-top: 0rem;
     padding-top:2rem;
+    padding-bottom:1rem;
     font-weight: 500;
 }
 
 .projectList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0px;
+    display: flex;
     font-weight: 300;
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+    padding-bottom:3rem;
+    padding-top: 3rem;
 }
 
 .projectList img {
-    height:90%;
-    width:90%;
+    max-width:100%;
+    max-height:auto;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
+}
+.imageBox {
+    margin-right:2rem;
+    
 }
 
 .headerLine1 {
@@ -350,9 +342,8 @@ nav {
     height:3px;
     border:none;
     background-color:var(--light-teal);
-    margin-bottom: 2rem;
-    margin-top: 1.2rem;
     transition:1s;
+    margin-top:1rem;
 }
 
 .headerLine2 {
@@ -360,12 +351,11 @@ nav {
     height:3px;
     border:none;
     background-color:var(--purple-faded);
-    margin-bottom: 2rem;
-    margin-top: 1.2rem;
     transition:1s;
+    margin-top:1rem;
 }
 .projectContainer:hover .headerLine1 {
-    width:300px;
+    width:250px;
     cursor: pointer;
 }
 .contactContainer:hover .headerLine2 {
@@ -373,25 +363,26 @@ nav {
     cursor: pointer;
 }
 .projectTitle {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     padding-bottom:0rem;
     font-weight: 400;
 }
 .projectSubTitle {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-weight: 400;
 }
 .projectSubText {
-    font-size:1.4em;
-    font-weight: 300;
+    font-size:1.2em;
+    font-weight: 400;
     color:black;
 }
 
 .projectText {
-    padding: .3rem 0rem;
+    padding:.3rem 0rem;
 }
 
 .projectMidSubText {
-    padding-right:20px;
+    padding-right:9px;
 }
 
 .moreBtn {
@@ -571,7 +562,7 @@ footer {
     content: '';
     position: absolute;
     width: 0%;
-    height: 1px;
+    height: 2px;
     top: 50%;
     margin-top: -0.5px;
     background: var(--purple);
@@ -597,172 +588,3 @@ footer {
     width: 100%;
     transition: 0s;
   }
-
-
-
-
-/* Media Queries */
-
-
-@media (max-width: 60.625em) {
-
-    body {
-        margin:0rem 0rem;
-        padding:0rem 0rem;
-    }
-    /* Home Section Queries  */
-    .homeContainer {
-      padding:0rem 4rem;
-      margin:0rem;
-      text-align: center;
-      min-height: 95vh;
-    }
-    .contactHeader {
-        padding-top: 10rem;
-    }
-    .contactBtn {
-        font-size: 1rem;
-    
-    }
-
-    .home {
-        font-size: 2rem;
-    }
-
-    .myName {
-        font-size:3rem;
-        
-    }
-
-    .contactHeader {
-        font-size: 3rem;
-    }
-    .contentHeader {
-        font-size: 3rem;
-    }
-
-    /* Project Queries  */
-    
-    .bottom-nav {
-        font-size: .7rem;
-        padding: 0rem 0.6rem;  
-    }
-    .bottom-nav2 {
-        font-size: .7rem;
-        padding: 0rem .6rem;  
-    }
-    .projectContainer {
-        margin-right: 1rem;
-        margin-left: 1rem;
-        /* background-color: red; */
-        padding:0rem 1.5rem;
-    
-    }
-    
-    .projectList {
-        display: grid; 
-        grid-template-columns: 1fr;
-        grid-column-gap: 0px;
-        font-weight: 300;
-        padding-top: 0rem;
-        padding-bottom: 3rem;
-
-    }
-    .projectContainer {
-            margin-right: 2rem;
-            margin-left: 2rem;
-            margin-bottom: 0rem;
-            
-        }
-    .projectTitle {
-        padding-top:2rem;
-    }
-
-    .middleText {
-        padding:0rem;
-        padding-bottom: 2rem;
-    }
-
-    
-
-        /* Contact Queries  */
-    #form {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-bottom: 4rem;
-        background-color: var(--off-white);
-      }
-    .contactHeader {
-        margin: 0rem;
-        margin-left:2rem;
-    }
-
-    /* Nav Queries  */
-
-    nav {
-        display:flex;
-        justify-content: center;
-        font-size: 1rem;
-        font-weight:300;
-        position: fixed;
-        transition: top 0.5s;
-    }
-
-    .logo {
-        font-size:1rem;
-        padding:0rem;
-    }
-    .navList {
-        padding:2rem;
-    }
-    .navBar {
-        padding:0rem .5rem;
-        
-    }
-}
-
-@media screen and (min-width: 1650px) {
-    /* For Large screens */
-  
-    .homeContainer {
-        min-height: 95vh;
-        padding:0rem 1rem 4rem 25rem;
-        font-size: 1.2rem;
-      
-    }
-      
-    #form {
-        margin-left: 25%;
-        margin-right: 25%;
-        margin-bottom: 10rem;
-    /* width: 500px;
-    margin: 50px auto 100px auto; */
-    }
-
-    .contactHeader {
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-
-    .projectContainer {
-        padding:0rem 11rem 0rem 16rem;
-        /* margin-right: 17rem;
-        margin-left: 19rem; */
-    }
-    .projectTitle {
-        font-size:3rem;
-    }
-    .projectSubText {
-        font-size: 1.8rem;
-    }
-    .projectSubTitle {
-        font-size:2.5rem;
-    }
-    .bottom-nav {
-        font-size: 1.6rem;        
-    }
-    .bottom-nav2 {
-        font-size: 1.6rem;
-       
-    }
-}
