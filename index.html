@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="homeMain">
 
 <head>
     <meta charset="UTF-8">
@@ -18,66 +18,62 @@
 </head>
 
 <body>
-
+    <section id="nav-menu">
+        <span class="slide">
+          <div class="openSlideMenu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </span>
+        <article class="menu-items">
+          <div class="close">
+            <i class="fas fa-times"></i>
+          </div>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <!-- <a href="#">Services</a> -->
+          <a href="#projectMain">Work</a>
+          <a href="#contactMain" id="contactMenu">Contact</a>
+        </article>
+        <!-- <h1>Responsive Animated Sidebar Menu</h1> -->
+      </section>
     <nav>
-        <div class="navList">
-            <a href="#homeMain" class="logo">LA</a>
-        </div>
         <ul class="navList">
             <li class="">
-                <a href="#projectMain" class="navBar projectBtn"><span class="navNum1">1. </span> Projects</a>
-            </li>
-            <li class="">
-                <a href="#contactMain" class="navBar homeBtn"><span class="navNum2">2. </span> Contact</a>
-            </li>
-
-            <li class="">
-                <a href="" class="navBar resumeBtn"><span class="navNum3"></span> Resume</a>
+                <!-- <a href="" class="navBar resumeBtn"><span class="navNum3"></span> Resume</a> -->
+                <a href="mailto:ltarmtrong94@gmail.com" class="contact-details"><i
+                    <i class="far fa-envelope email-btn"></i></a>
             </li>
         </ul>
-
     </nav>
 
-    <div class="mainContainer homeContainer" id="homeMain">
+    <section class="mainContainer homeContainer">
         <p class="home smallHeader">Hi, my name is</p>
         <h1 class="home myName">Liam Armstrong<span class="spanPeriod">.</span></h1>
         <p class="home subTitle">I'm a Software Developer from the Bay Area<span>.</span></p>
-
-        <div class="socials ">
+        <article class="socials ">
             <a id="profile-link" href="https://github.com/Liam-Tomas" class="contactBtn github" target="_blank" "><i
                     class=" fab fa-github fa-2x"></i></a>
             <a href=" " class="contactBtn linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
             <a href="mailto:ltarmtrong94@gmail.com" class="contactBtn email contact-details"><i
                     class="far fa-paper-plane fa-2x"></i></a>
-        </div>
+        </article>
+    </section>
 
-    </div>
-    <div class="bottom-nav">
-        <p>
-            &copy; Created by
-            <a href="" target="_blank">
-                <span class="footName">Liam Armstrong→</span></a>
-        </p>
-    </div>
-
-    <div class="bottom-nav2">
-        <p>ltarmstrong94@gmail.com→</p>
-    </div>
-
-
-    <div class="projectContainer" id="projectMain">
-        <div class="contentHeader">
+    <section class="projectContainer" id="projectMain">
+        <header class="contentHeader">
             <h1>My Work</h1>
             <hr class="headerLine1">
+        </header>
+        <div>
+            <a href="" class="projectCategory">Fade Out/In</a>
         </div>
-        <div class="projectList">
+        <article class="projectList">
             <div class="imageBox">
                 <img src="images/project-pic.png" alt="" class="projectImg">
                 <div class="middle">
-                    <div class="text">View Project</div>
+                    <p class="text">View Details</p>
                 </div>
             </div>
-
             <div class="projectTextContainer">
                 <h2 class="projectText projectTitle">Name of my Project.</h2>
                 <p class="projectText projectSubTitle">Description of my cool project.</p>
@@ -90,13 +86,18 @@
                     <i class="fab fa-node-js fa-3x"></i>
                     <i class="fab fa-js-square fa-3x"></i>
                     <i class="fab fa-react fa-3x"></i>
+                    <span class="detailsBtn">Learn More</span>
                 </div>
             </div>
-        </div>
-
-
-        <hr>
-        <div class="projectList">
+        </article>
+        <hr class="line-break">
+        <article class="projectList">
+            <div class="imageBox"">
+                <img src=" images/project-pic2.jpeg" alt="project" class="projectImg">
+                <div class="middle">
+                    <p class="text">View Details</p>
+                </div>
+            </div>
             <div class=projectTextContainer>
                 <h2 class="projectText projectTitle projectMidSubText">Another Project.</h2>
                 <p class="projectText projectSubTitle projectMidSubText">Description of my cool project.</p>
@@ -110,22 +111,16 @@
                     <i class="fab fa-node-js fa-3x"></i>
                     <i class="fab fa-js-square fa-3x"></i>
                     <i class="fab fa-react fa-3x"></i>
+                    <span class="detailsBtn">Learn More</span>
                 </div>
             </div>
-            <div class="imageBox"">
-                <img src=" images/project-pic2.jpeg" alt="project" class="projectImg">
-                <div class="middle">
-                    <div class="text">View Project</div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-        <div class="projectList">
+        </article>
+        <hr class="line-break">
+        <article class="projectList">
             <div class="imageBox">
                 <img src="images/project-pic3.jpeg" alt="" class="projectImg">
                 <div class="middle">
-                    <div class="text">View Project</div>
+                    <p class="text">View Details</p>
                 </div>
             </div>
             <div class="projectTextContainer">
@@ -140,21 +135,21 @@
                     <i class="fab fa-node-js fa-3x"></i>
                     <i class="fab fa-js-square fa-3x"></i>
                     <i class="fab fa-react fa-3x"></i>
+                    <span class="detailsBtn">Learn More</span>
                 </div>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
 
     <div class="moreBtnContainer">
         <div class="btnClass moreBtn">See More</div>
     </div>
-    </div>
 
-    <div class="contactContainer" id="contactMain">
-        <div class="contactHeader">
+    <section class="contactContainer" id="contactMain">
+        <header class="contactHeader">
             <h1>Get in Touch</h1>
             <hr class="headerLine2">
-        </div>
+        </header>
         <form id="form" class="topBefore">
             <div class="formContainer">
                 <div>
@@ -170,7 +165,7 @@
 
             </div>
         </form>
-    </div>
+    </section>
     <footer>
         <!-- <p>
           www.github.com/Liam-Tomas
@@ -181,8 +176,25 @@
                     class="fab"></i></a>
         </p>
     </footer>
+
+    <div class="bottom-nav">
+        <p>
+            &copy; Created by
+            <a href="" target="_blank">
+                <span class="footName">Liam Armstrong→</span></a>
+        </p>
+    </div>
+    <div class="bottom-nav2">
+        <p>ltarmstrong94@gmail.com→</p>
+    </div>
+
+    <!-- Slide out Nav Bar  -->
+
+
+
+
+
     <script src="app.js"></script>
 </body>
-
 
 </html>

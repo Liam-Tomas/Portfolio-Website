@@ -121,12 +121,15 @@
     /* For Large screens */
   
     .homeContainer {
-        min-height: 95vh;
+        min-height: 80vh;
         padding:0rem 1rem 4rem 25rem;
-        font-size: 1.2rem;
-      
+
     }
       
+    .myName {
+        font-size:4rem;
+    }
+
     #form {
         margin-left: 25%;
         margin-right: 25%;
