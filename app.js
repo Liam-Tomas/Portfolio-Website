@@ -7,7 +7,7 @@ window.onscroll = function () {
   if (prevScrollpos > currentScrollPos) {
     document.querySelector("nav").style.top = "0";
   } else {
-    document.querySelector("nav").style.top = "-140px";
+    document.querySelector("nav").style.top = "-120px";
   }
   prevScrollpos = currentScrollPos;
 }
@@ -30,7 +30,7 @@ const navMenu = document.querySelector('#nav-menu')
 const navSlideBtn = document.querySelector('.openSlideMenu');
 const navClose = document.querySelector('.close')
 const menuItem = document.querySelector('.menu-items')
-const contactMenu = document.querySelector('#contactMenu')
+const contactMenu = document.querySelectorAll('#contactMenu')
 
 
 navSlideBtn.addEventListener('click', function () {
@@ -46,8 +46,10 @@ navClose.addEventListener('click', function () {
   navSlideBtn.style.opacity = '1'
 });
 
-contactMenu.addEventListener('click', function() {
-  menuItem.style.width = '0px';
-  navMenu.style.marginLeft = '0px';
-  navSlideBtn.style.opacity = '1'
-})
+for (let contactStuff of contactMenu) {
+   contactStuff.addEventListener('click', function () {
+     menuItem.style.width = '0px';
+     navMenu.style.marginLeft = '0px';
+     navSlideBtn.style.opacity = '1'
+   })
+ }
