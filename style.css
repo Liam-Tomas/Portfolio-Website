@@ -616,20 +616,16 @@ footer {
     justify-content: space-evenly;
     padding: 0rem;
     color:var(--white-dark); 
-  
     /* border-top: 4px solid var(--main-red); */
     font-size: 1.4rem;
-  
   }
 
   footer > p {
     margin: 1.2rem;
-   
   }
   
   footer i {
     vertical-align: middle;
- 
   }
 
   .footerText {
@@ -679,26 +675,12 @@ footer {
   }
 
 .line-break {
-   
     height:1px;
     border:none;
     background-color:var(--dark-blue-faded);
     transition:1s;
     margin-top:1rem;
 }
-
-.projectList {
-  opacity: 1;
-  transition: opacity 1s; 
-}
-
-.projectList.fade {
-  opacity: 0;
-}
-
-
-
-
 
 /* Nav Slide Out Menu */
 
@@ -732,6 +714,7 @@ footer {
 	padding-top: 60px;
 	transition: 0.5s;
 }
+
 .menu-items a {
 	display: block;
 	padding: 20px 30px;

@@ -3,33 +3,37 @@
 
 
 @media (max-width: 60.625em) {
-
+html {
+    overflow-x: hidden;
+}
     body {
         margin:0rem 0rem;
         padding:0rem 0rem;
+      
     }
     /* Home Section Queries  */
     .homeContainer {
       padding:0rem 4rem;
       margin:0rem;
       text-align: center;
-      min-height: 85vh;
+      min-height: 80vh;
+      width: ;
     }
     .contactHeader {
         padding-top: 10rem;
     }
     .contactBtn {
-        font-size: 1rem;
+        font-size: rem;
     
     }
 
     .home {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
     .myName {
         font-size:3rem;
-        
+
     }
 
     .contactHeader {
@@ -39,15 +43,36 @@
         font-size: 3rem;
     }
 
+    /* nav queries */
+
+
+nav {
+    display:none;
+    justify-content: flex-end;
+    font-size: 0rem;
+    font-weight:300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    transition: top 0.5s;
+    /* margin-left: 50px; */
+}
+
+
+
     /* Project Queries  */
     
     .bottom-nav {
         font-size: .7rem;
-        padding: 0rem 0.6rem;  
+        padding: 0rem 0.6rem; 
+        display:none; 
     }
     .bottom-nav2 {
         font-size: .7rem;
-        padding: 0rem .6rem;  
+        padding: 0rem .6rem; 
+        display:none; 
     }
     .projectContainer {
         margin-right: 1rem;
@@ -62,7 +87,7 @@
         grid-template-columns: 1fr;
         grid-column-gap: 0px;
         font-weight: 300;
-        padding-top: 0rem;
+        padding-top: 3rem;
         padding-bottom: 3rem;
 
     }
@@ -76,16 +101,12 @@
         padding-top:2rem;
     }
 
-    .middleText {
-        padding:0rem;
-        padding-bottom: 2rem;
-    }
-
         /* Contact Queries  */
     #form {
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 4rem;
+        margin-top: 2rem;
         background-color: var(--off-white);
       }
     .contactHeader {
@@ -95,22 +116,16 @@
 
     /* Nav Queries  */
 
-    nav {
-        display:flex;
-        justify-content: flex-end;
-        font-size: 1rem;
-        font-weight:300;
-        transition: top 0.5s;
+    .navList {
+        display: none;
+        justify-content: space-between;
+        margin: 3.4rem 4.5rem 0rem 0rem;  
+        background-color: var(--white-dark-faded);
+        border-radius: 5px;
+        color:red;
     }
 
-    .logo {
-        font-size:1rem;
-        padding:0rem;
-    }
-    .navList {
-        padding-right:1rem;
-        display:flex;
-    }
+
     .navBar {
         padding:0rem 0rem;
         
