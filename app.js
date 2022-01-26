@@ -12,17 +12,16 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 }
 
-const button = document.querySelector('.moreBtn');
-const projects = document.querySelectorAll('.projectList')
-const projectCategory = document.querySelector('.projectCategory')
+// const button = document.querySelector('.moreBtn');
 
-projectCategory.addEventListener('click', function (e) {
-  e.preventDefault();
-  for (let project of projects) {
-    project.classList.toggle('fade')
-  }
-});
+// const projectCategory = document.querySelector('.projectCategory')
 
+// projectCategory.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   for (let project of projects) {
+//     project.classList.toggle('fade')
+//   }
+// });
 
 // Nav Menu Open and Close
 
@@ -32,13 +31,11 @@ const navClose = document.querySelector('.close')
 const menuItem = document.querySelector('.menu-items')
 const contactMenu = document.querySelectorAll('#contactMenu')
 
-
 navSlideBtn.addEventListener('click', function () {
   menuItem.style.width = '250px';
   navMenu.style.marginLeft = '250px';
   navSlideBtn.style.opacity = '0'
 });
-
 
 navClose.addEventListener('click', function () {
   menuItem.style.width = '0px';
@@ -53,3 +50,19 @@ for (let contactStuff of contactMenu) {
      navSlideBtn.style.opacity = '1'
    })
  }
+
+ // Project Slide In 
+ const projects = document.querySelectorAll('.projectList')
+ window.addEventListener('scroll', checkBoxes)
+
+function checkBoxes() {
+  const triggerBottom = window.innerHeight / 5 * 4
+  projects.forEach(project => {
+    const boxTop = project.getBoundingClientRect().top;
+    if(boxTop < triggerBottom) {
+      project.classList.add('project-show')
+    } else {
+      project.classList.remove('project-show')
+    }
+  })
+}

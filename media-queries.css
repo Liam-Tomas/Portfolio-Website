@@ -13,7 +13,7 @@
       padding:0rem 4rem;
       margin:0rem;
       text-align: center;
-      min-height: 95vh;
+      min-height: 85vh;
     }
     .contactHeader {
         padding-top: 10rem;
@@ -97,10 +97,9 @@
 
     nav {
         display:flex;
-        justify-content: center;
+        justify-content: flex-end;
         font-size: 1rem;
         font-weight:300;
-        position: fixed;
         transition: top 0.5s;
     }
 
@@ -109,12 +108,22 @@
         padding:0rem;
     }
     .navList {
-        padding:2rem;
+        padding-right:1rem;
+        display:flex;
     }
     .navBar {
-        padding:0rem .5rem;
+        padding:0rem 0rem;
         
     }
+    .email-btn {
+        color:var(--dark-blue);
+        background-color: var(--purple-faded);
+        border-radius: 50%;
+        padding: .7rem .7rem;
+        font-size: 2rem;
+        transition: .2s;
+        
+      }
 }
 
 @media screen and (min-width: 1650px) {
@@ -122,12 +131,12 @@
   
     .homeContainer {
         min-height: 80vh;
-        padding:0rem 1rem 4rem 25rem;
-
+        padding:0rem 0rem 4rem 25rem;
+        /* transform: scale(1.1); */
     }
       
-    .myName {
-        font-size:4rem;
+    .mainContainerText {
+        transform: scale(1);
     }
 
     #form {
